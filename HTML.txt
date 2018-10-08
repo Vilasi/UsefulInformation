@@ -75,3 +75,12 @@ Anything in a CSS document between /* and */ is a CSS comment, which the browser
 
 
 WHAT IS THE ROLE OF JAVASCRIPT?:
+
+JavaScript is the programming language that you use to add interactive features to your website. Some examples could be games, things that happen when buttons are pressed or data is entered in forms, dynamic styling effects, animation, and much more.
+
+Putting JavaScript near the bottom of the HTML page is a good idea; because HTML files are  		loaded in the order they're written. If JavaScript is loaded first it may cause the page 	 to break.
+
+variables are containers that you store values in.
+	staret by declaring a variable with (var) followed by a name for that variable.
+
+
