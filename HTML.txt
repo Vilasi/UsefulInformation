@@ -1,0 +1,8 @@
+WHAT IS HTML:
+
+HTML provides the structure of a website 
+
+
+A front end devolper builds the "gateway to the product" (product being a webpage and the services therein): The Face of the Website, What clients using the website actually interact with.
+
+
