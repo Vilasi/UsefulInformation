@@ -5,6 +5,10 @@ HTML provides the structure of a website
 
 A front end devolper builds the "gateway to the product" (product being a webpage and the services therein): The Face of the Website, What clients using the website actually interact with.
 
+Checkout Shoptalk Podcast with Chris Coyier
+
+Use no spaces in file names. If spaces must be used, use-dashes, not_underscores.
+	(e.g.	web-project.txt      NOT     web_project.txt)
 
 
 WHAT IS THE ROLE OF HTML?:
