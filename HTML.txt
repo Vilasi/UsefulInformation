@@ -11,11 +11,66 @@ Use no spaces in file names. If spaces must be used, use-dashes, not_underscores
 	(e.g.	web-project.txt      NOT     web_project.txt)
 
 
-WHAT IS THE ROLE OF HTML?:
+
+WHAT IS THE ROLE OF HTML ("Hypertext Markup Language")?:
+
+index.html is the file that will contain the homepage content
+
+images is the folder that will contain all the images on the site
+
+styles is the folder that will contain all the css styling code. (e.g. the coloration of text, 		background, etc.)
+
+scripts is the folder that will contain the JavaScript code. Useable buttons, clickable links and 
+	general interactive functionality.
+
+html code provides paths to files in various locations, so that the website knows where to 		look to find specific files.
 
 
 
-WHAT IS THE ROLE OF CSS?:
+
+WHAT IS THE ROLE OF CSS ("Cascading Stylesheets")?:
+
+CSS is a stylesheet language. It lets you apply styles selectively to files within an HTML 		document.
+
+	An Example of a CSS Rule Set is:
+
+		p {
+		  color: red;
+		}
+
+P is the HTML Selector. Different values select different things.
+
+color is the property
+
+red is the property value
+
+color: red;  is the Declaration
+
+					SYNTAX
+
+	Each Rule Set aside from the selector must be wrapped in curly brackets. {}
+	
+	A colon : seperates the property from its values
+
+	A semicolon ; seperates one declaration from another
+
+e.g.            p {
+ 		 color: red;
+ 		 width: 500px;
+  		 border: 1px solid black;
+		}
+
+Multiple Selectors can be used at once, seperated by commas.
+e.g.		p, li, h1 {
+ 		 color: red;
+ 		 width: 500px;
+  		border: 1px solid black;
+		}
+
+
+Anything in a CSS document between /* and */ is a CSS comment, which the browser ignores when it renders the code. This is a place for you to write helpful notes on what you are doing
+	
+	
 
 
 
