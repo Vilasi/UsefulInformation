@@ -14,12 +14,32 @@ DISPLAYING TEXT:
 <strong> : Emboldens text
 
 
-LINE BREAK (Only uses an opening tag):
+Line Break (Only uses an opening tag):
 <br>
 
-UNORDERED LIST (A list of bullet points): <ul>
+Unordered List (A list of bullet points): <ul>
 <li> : List items to be contained within an unordered list. </ul>
 
-ORDERED LIST (A list of numbered items): <ol>
+Ordered List (A list of numbered items): <ol>
 <li></li>
+
+
+
+IMAGES: 
+A self closing tag. Contains the attribute src (source). A URL or other file location.
+<img    src="image-location.jpg" />
+
+Alt attribute: The description of the image (allows screen reader accessibility)
+<img src="#" alt "A cute little brown bear" />
+
+
+
+VIDEOS: Require an opening and closing tag
+<video src="myVideo.mp4" width="320" height="240" controls>
+Video not supported
+</video>
+
+width and height determine the size of the video player within the webpage. controls allows the video player to have basic video controlls. 
+
+the text "video not supported" will only be displayed if the browser cannot load the video.
 
