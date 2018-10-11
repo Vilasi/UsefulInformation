@@ -1,4 +1,25 @@
 <p> : Paragraph
-<h1> : Headings. Can be <h1> through <h6>
+<h1> : Headings. Can be <h1> through <h6>. Ordered from Largest in size to Smallest.
 <body> : Contains things that will actually be displayed to the page.
+<div> : Generic flow container. Has no effect until styled with CSS. "Division". Divides the page 		into sections. Divs can contain any other text or HTML element.
+
+ATTRIBUTES (They have a name and a value):
+ID: A value that can be added to a tag to identify it.
+ - Contained within the opening tag e.g.<div id="intro">
+
+DISPLAYING TEXT:
+<p> : Paragraph
+<span> : Contain short pieces of text or other HTML. For use on lines of text that are inline.
+<em> : Italicizes Text
+<strong> : Emboldens text
+
+
+LINE BREAK (Only uses an opening tag):
+<br>
+
+UNORDERED LIST (A list of bullet points): <ul>
+<li> : List items to be contained within an unordered list. </ul>
+
+ORDERED LIST (A list of numbered items): <ol>
+<li></li>
 
