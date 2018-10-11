@@ -30,5 +30,17 @@ Images can be used as links by wrapping the <img> element with a link element <a
 
 		<a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"><img src="#" 			alt="A red prickly pear fruit"/></a>
 
+LINKING TO A TARGET WITHIN THE PAGE
 
+an "id" can be added within an opening tag.
+e.g. <p id="top">This is the Top Paragraph</p>
+
+it can then be linked to later in the page
+
+(e.g. ordered list of links) <ol>
+			        <li><a href="#top">Top</a></li>
+				</ol>
+
+
+Two spaces of indentation (for nested objects) are starndard for readable HTML code.
 
