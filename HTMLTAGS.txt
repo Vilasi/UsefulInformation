@@ -1,0 +1,4 @@
+<p> : Paragraph
+<h1> : Headings. Can be <h1> through <h6>
+<body> : Contains things that will actually be displayed to the page.
+
