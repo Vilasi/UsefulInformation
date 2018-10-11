@@ -39,7 +39,9 @@ VIDEOS: Require an opening and closing tag
 Video not supported
 </video>
 
-width and height determine the size of the video player within the webpage. controls allows the video player to have basic video controlls. 
+width and height determine the size of the video player within the webpage. 
+
+controls attribute allows the video player to have basic video controlls. 
 
 the text "video not supported" will only be displayed if the browser cannot load the video.
 
