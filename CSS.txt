@@ -1,0 +1,69 @@
+INLINE STYLES: For writing CSS code directly in an HTML document
+The "style" attribute can be added directly to the opening tag.
+	After the attribute is added, it can be set equal to the CSS style you want to apply.
+
+	<p style="color: red;">I'm learning to code!</p>
+
+	The style attribute is set equal to color: red;
+
+	These can be added indefinitely, seperated by a semi colon ; 
+	
+	<p style="color: red; font-size: 20px;">I'm learning to code!</p>
+
+
+
+THE <style> TAG: A dedicated section for CSS code.
+
+	This must be placed within the <head>  
+					<style>
+					</style>
+				       </head>
+
+	An example of changing the font of paragraphs in the HTML file:
+					<style>
+   					 p{
+     				            font-family: Arial;
+  					  }
+    
+ 					 </style>
+
+
+THE STYLE.CSS FILE:
+
+To keep code types separated, a .css file can be linked to from within the HTML file.
+
+<link> : Used to link to the .css
+
+You can use the <link> element to link HTML and CSS files together. The <link> element must be placed within the head of the HTML file. It is a self-closing tag and requires the following three attributes:
+
+    href — like the anchor element, the value of this attribute must be the address, or path, to the CSS file.
+
+    type — this attribute describes the type of document that you are linking to (in this case, a CSS file). The value of this attribute should be set to text/css.
+
+    rel — this attribute describes the relationship between the HTML file and the CSS file. Because you are linking to a stylesheet, the value should be set to stylesheet.
+
+	For Example: <link href="https://www.codecademy.com/stylesheets/style.css" type="text/css" 				rel="stylesheet">
+
+	If stored in the same folder, the href can link to a relative path
+	IE href="./style.css"
+
+
+CSS SELECTORS: For selecting HTML elements to be affected.
+	The css selector will match the HTML tag.
+
+<p> : Paragraphs 
+	p {
+	}
+
+HTML tags can have have attributes. For example class
+	<p class="brand">Sole Shoe Company</p>
+
+	CSS can select these attributes
+
+	To select "brand" we can write, in CSS
+
+	.brand {
+	}
+
+
+
