@@ -44,3 +44,57 @@ it can then be linked to later in the page
 
 Two spaces of indentation (for nested objects) are starndard for readable HTML code.
 
+Comments may be added by <!-- Comment/Test Code -->
+	This is useful not only for adding comments, but for keeping code that you may want to 	
+	implement later.
+
+
+TABLES AND TABLE HEADINGS:
+
+<table> : For creating a table of data
+<tr> :To create a row element
+<td> :Table Data Element, for creating a column
+<th> for creating a table heading
+    Attributes: <th scope="col"> or scope="row", to make it clear what the heading is for, a       	column or a row
+
+eg <table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+SPANNING COLUMNS & ROWS: 
+For tables with data that spans multiple columns
+Attribut: colspan= >=1
+
+<table>
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+  </tr>
+  <tr>
+    <td colspan="2">Out of Town</td>
+    <td>Back in Town</td>
+  </tr>
+</table>
+
+In the example above, the data Out of Town spans the Monday and Tuesday table headings using the value 2 (two columns). The data Back in Town appear only under the Wednesday heading.
+
+For tables with data that spans multiple rows:
+Attribute: rowspan=">=1" 
+(e.g.) Spanning a <td> across 2 rows : <td rowspan="2"></td>
+
+
+TABLE BODY: <tbody></tbody> : This should contain all of the table's data except for the headings.
+
+TABLE HEAD: <thead></thead> : This should contain all of the table's headings
+
+TABLE FOOT: <tfoot></tfoot> : This contains all of the footing of the table.
