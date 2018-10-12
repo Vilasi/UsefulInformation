@@ -65,5 +65,30 @@ HTML tags can have have attributes. For example class
 	.brand {
 	}
 
+the period (.) is necessary
 
 
+CSS can set different styles to the same item by selecting multiple classes.
+	For example, in HTML <h1 class="green bold">...</h1>
+
+    ...then, in CSS 
+
+		.green {
+  		   color: green;
+		}
+
+		.bold {
+                   font-weight: bold;
+		}
+
+	The different classed will be separated by a space within the opening tag.
+
+
+ID NAME: For uniquely styling HTML elements (no matter what classes are applied to the element)
+
+	<h1 id="large-title"> ... </h1>
+
+To select this in CSS, a # is used.
+
+	#large-title {
+	}
