@@ -92,3 +92,4 @@ To select this in CSS, a # is used.
 
 	#large-title {
 	}
+->Don't apply the same ID to different elements.
