@@ -93,3 +93,65 @@ To select this in CSS, a # is used.
 	#large-title {
 	}
 ->Don't apply the same ID to different elements.
+
+
+
+
+DIFFERENCE BETWEEN TAGS CLASSES AND IDs
+
+	Classes may be applied to many HTML elements. 
+	IDs are applied uniquely to a single element 
+
+	  Classes override Tags
+
+	  IDs override classes and tags
+
+
+CHAINING SELECTORS
+
+	An HTML element can have two or more CSS selectors at 
+	the same time.
+		This is done by combining multipe selectors.
+
+				
+				h1.special {
+	
+				}
+
+
+		In this code, only the h1 elements that have a class
+		of special would be selected.
+
+		ID is still a more specific selector. 
+
+
+
+NESTED ELEMENTS
+
+	CSS can select nested elements within a selected element.
+
+	Take this code for example:
+
+	
+	<ul class='main-list'>
+ 	 <li> ... </li>
+	  <li> ... </li>
+ 	 <li> ... </li>
+	</ul>					The <li> are nested
+						withing the <ul>
+
+
+
+	The nested <li> elements are selected with this CSS:
+
+
+	.main-list li {
+	
+	}
+
+				->Note the Space in
+				between the selectors.
+	
+	
+
+
