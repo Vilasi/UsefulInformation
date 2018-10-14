@@ -15,7 +15,7 @@
 
 
 
-				CHANGING FONTS
+									CHANGING FONTS
 
 	h1 {
 	  font-family: Garamond;
@@ -58,7 +58,7 @@
 
 
 
-				FONT SIZE
+									FONT SIZE
 
 font-size
 
@@ -82,4 +82,100 @@ px means Pixels
 
 		There are pros and cons of each unit but one major advantage of using relative units is that they lend 
 		themselves more naturally to responsive design. Relative units like ems and rems are flexible and scalable whereas pixels are not.]
+
+
+
+
+									FONT WEIGHT
+		
+
+
+font-weight controls how bold or thin a font is. (e.g.):
+
+							p {
+							  font-weight: bold;
+							
+							}
+
+		The font would be made bold.
+
+font-weight: normal;   
+
+This status will selectively turn off any font-weight manipulations.
+
+
+
+
+									ALIGNING TEXT
+By Default, all text on a browser will be Left-Aligned 
+
+text-align: left; center; right
+
+padding-top: 10px;
+
+width: 100%;
+
+
+
+
+
+
+									  COLOR
+
+The Foreground and Backgroud color can be manipulated, as well as the text color.
+
+
+color: red;
+
+background-color: green;
+
+(e.g.):					h1 {
+ 					 color: red;
+ 					 background-color: blue;
+					}
+
+
+					-> Here the text of the heading will appear red
+					   The Background of the heading will appear blue
+
+
+Linear Gradients can be used for the colorof the background to make it fade across the page.
+
+background: linear-gradient(-45deg, #C46E41, #00FFD1);
+
+
+
+
+									OPACITY
+
+Opacity is the measure of how transparent something is.
+
+It is measured from 0 to 1 (e.g.):  				.overlay {
+								  opacity: 0.5;			[.overlay element would be 50% visible]
+								}
+
+
+This can be used to make things fade nicely into each other.
+
+
+
+									BACKGROUND-IMAGE
+
+background-image
+
+The background can be set to an image stored elsewhere (a url, directory)
+
+
+					.main-banner {
+ 					 background-image: url("https://www.example.com/image.jpg");
+					}
 	
+
+								or to a relative path
+
+
+					.main-banner {
+ 					 background-image: url("images/mountains.jpg");
+					}
+
+
