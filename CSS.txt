@@ -28,7 +28,7 @@ THE <style> TAG: A dedicated section for CSS code.
  					 </style>
 
 
-THE STYLE.CSS FILE:
+				HE STYLE.CSS FILE:
 
 To keep code types separated, a .css file can be linked to from within the HTML file.
 
@@ -97,7 +97,7 @@ To select this in CSS, a # is used.
 
 
 
-DIFFERENCE BETWEEN TAGS CLASSES AND IDs
+			DIFFERENCE BETWEEN TAGS CLASSES AND IDs
 
 	Classes may be applied to many HTML elements. 
 	IDs are applied uniquely to a single element 
@@ -107,7 +107,7 @@ DIFFERENCE BETWEEN TAGS CLASSES AND IDs
 	  IDs override classes and tags
 
 
-CHAINING SELECTORS
+				CHAINING SELECTORS
 
 	An HTML element can have two or more CSS selectors at 
 	the same time.
@@ -126,7 +126,7 @@ CHAINING SELECTORS
 
 
 
-NESTED ELEMENTS
+				 NESTED ELEMENTS
 
 	CSS can select nested elements within a selected element.
 
@@ -152,6 +152,73 @@ NESTED ELEMENTS
 				->Note the Space in
 				between the selectors.
 	
-	
 
+
+	-> A chained selector,   p.main   and   .main p   would have the same specificity
+
+
+
+
+
+
+					!important
+
+!important is the only selector which is more specific than an ID
+	
+	The syntax looks like:
+
+
+				p {
+				  color: blue !important;
+				}
+
+
+				.main p {
+ 				  color: red;
+				}
+
+
+	-> Since !important is used on the p selectos'c color attribute,
+	   all p elements will appear blue, even though there is a more 
+	   specific    .main p    selector that sets the color attribute
+           to red.
+
+
+	-> The !important tag is only useful if something must remaine the 
+	   same forever and throughout all possible future updates
+		-> It is not advisable to use this tag.
+
+
+
+
+				Applying the Same Style 
+					  to
+			          Multiple Selectors
+
+
+
+Consider this code:
+
+			h1 {
+ 			 font-family: Georgia;
+			}
+
+			.menu {
+ 			 font-family: Georgia;
+			}
+
+
+Two different selectors are being used to apply the same effect.
+This could be done more consicely, by:
+
+
+			h1,
+			.menu {
+			 font-family: Georgia;
+			}
+
+
+		->By separating the CSS selectors with a comma, 
+		  both the h1 and the .menu elements will receive 
+		  the font-family: Georgia styling.
 
