@@ -222,3 +222,9 @@ This could be done more consicely, by:
 		  both the h1 and the .menu elements will receive 
 		  the font-family: Georgia styling.
 
+
+
+
+
+
+One common way to keep our CSS concise is via proper utilization of “inheritance”. Within CSS, the computed values of many properties get inherited from ancestor elements. We can use this fact to reduce the number of declarations we write. For example, if I want most of the text on my page to be 20px I can declare font-size: 20px on the html selector. As <html> is the root element and the font-size property is inheritable, all text for this page will be 20px. In cases where we want to deviate from this 20px norm, we can use a selector with a higher specificty to target the element whose font-size we want to override.
