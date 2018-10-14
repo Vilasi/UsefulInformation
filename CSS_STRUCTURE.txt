@@ -1,0 +1,85 @@
+				h1 {
+ 				 color: blue;
+				}
+
+	The above rule set selects the <h1> element. 
+	color: blue;          is the CSS declaration.
+	|         \
+	|          \
+	|           \
+     Property      Value
+
+
+
+
+
+
+
+				CHANGING FONTS
+
+	h1 {
+	  font-family: Garamond;
+	}
+
+
+	This code would change the font of all h1 
+	headings to Garamond
+
+
+	It is important to note that for a font to
+	load, it must already be installed on a 
+	user's computer.
+
+
+	If no font-family is defined, HTML will
+	always default to Times New Roman
+
+	Try not to use more than 2 or 3 typefaces
+	on any webpage. 
+
+	When the typeface consists of more than one
+	word, it is a good idea to enclose 
+	the name in quotes (e.g.):
+
+
+	h1 {
+	  font-family: "Courier New";
+	}
+
+
+
+		Non User Fonts are fonts which are stored elsewhere
+		than on the User's computer.
+		->These can be linked to with the <link> element
+		  or using @font-face.
+		->Google Fonts is a popular repository of these. 
+
+
+
+
+
+				FONT SIZE
+
+font-size
+
+(e.g.)			p {
+			  font-size: 18px;
+			}
+
+px means Pixels
+
+
+
+		[A pixel is one of several units of measure in web development. It is an absolute 			
+		 unit equal to 1/96 of an inch.
+
+		Rems and ems are scalable typographic units which are commonly used with the font-size property.
+		 As opposed to pixels, both of these units are relative. For example, an em is measured relative
+		 to the font-size of an element. When dealing with ems it is important to realize that the font-size 
+		 of an element is often inherited from an ancestor element. On the other hand, rems are determined 
+		 based on the font-size of the html element. If font-size is not defined on the html element, the browser’s 
+		 default font-size is used instead (usually 16px).
+
+		There are pros and cons of each unit but one major advantage of using relative units is that they lend 
+		themselves more naturally to responsive design. Relative units like ems and rems are flexible and scalable whereas pixels are not.]
+	
