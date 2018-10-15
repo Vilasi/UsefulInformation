@@ -45,3 +45,141 @@ controls attribute allows the video player to have basic video controlls.
 
 the text "video not supported" will only be displayed if the browser cannot load the video.
 
+
+
+
+					FORM:
+
+			For transferring User Entered Data
+
+<form></form>
+
+action= attribute is needed to tell where the information will be sent.
+
+method= attribute is needed to tell how the information will be sent
+
+	method=get: for shorter, less secure transmissions
+	method=post: for longer, more secure transmissions
+		post sends the information invisbly 
+
+
+<form action="processingscript.php" method="post">
+
+</form>
+
+
+
+				INPUT:
+
+A form control, allowing input from a user. 
+It can be one of many types, including a text field, a checkbox, or a submit button.
+
+input has no content and therefore does not warrant a closing tag.
+
+<input type="text"> or simply <input> is a standard textbox
+
+<input type="password">
+
+<input type="submit" value="Click this button to Submit">
+
+
+
+input is a self-closing tab
+
+
+
+
+
+				TEXTAREA:
+
+A large multi-line textbox.
+
+The number of rows and columns can be defined with
+
+rows & cols
+
+
+
+
+<textarea rows="5" cols="20">A big load of text</textarea>
+
+
+
+
+
+				SELECT & OPTION:
+
+Two tags which work together to make drop-dow select boxes
+
+
+
+<select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option value="third option">Option 3</option>
+</select>
+
+
+The value sent will be the text within the <option></option>,
+unless the value= attribute is set. In which case that 
+value will be sent.
+
+
+This can start off with an option already selected.
+
+
+<option selected>Rodent</option>  would pre-select "Rodent" from the items.
+
+
+
+
+
+
+					NAME:
+
+An essential attribute that allows other languages
+to interpret the results of the forms.
+
+
+<input type="text" name="talkingsponge">
+
+
+
+
+				NOAH's ARK CONTACT (full) FORM (example)
+
+
+
+<form action="contactus.php" method="post">
+
+    <p>Name:</p>
+    <p><input type="text" name="name" value="Your name"></p>
+
+    <p>Species:</p>
+    <p><input name="species"></p>
+    <!-- remember: 'type="text"' isn't actually necessary -->
+
+    <p>Comments: </p>
+    <p><textarea name="comments" rows="5" cols="20">Your comments</textarea></p>
+
+    <p>Are you:</p>
+    <p><input type="radio" name="areyou" value="male"> Male</p>
+    <p><input type="radio" name="areyou" value="female"> Female</p>
+    <p><input type="radio" name="areyou" value="hermaphrodite"> An hermaphrodite</p>
+    <p><input type="radio" name="areyou" value="asexual"> Asexual</p>
+
+    <p><input type="submit"></p>
+
+</form>
+
+
+-->The .php is an extension which allows us to handle the submitted data.
+
+
+
+
+
+
+
+
+
