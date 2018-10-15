@@ -99,9 +99,98 @@ font-weight controls how bold or thin a font is. (e.g.):
 
 		The font would be made bold.
 
+font-weight: bold;
+
+font-weight: bolder;
+
+font-weight: lighter;
+
 font-weight: normal;   
 
 This status will selectively turn off any font-weight manipulations.
+
+
+Try to stick to just bold and normal.
+
+
+
+
+
+
+
+									FONT-STYLE
+
+font-style: italic
+
+font-style: normal;
+
+
+
+
+
+
+
+
+									TEXT-DECORATION
+
+text-decoration: underline;
+
+text-decoration: overline;
+
+text-decoration: line-through;
+
+text-decoration: none;
+
+
+	->Underlines should generally only be used for links.
+
+
+
+
+
+
+									TEXT-TRANSFORM
+
+text-transform: capitalize;      Turns the first letter of every word to capital
+
+text-transform: uppercase;       Makes all text UPPERCASE
+
+text-transform: lowercase;	 makes all text lowercase
+
+text-transform: none;
+
+
+
+
+
+
+									TEXT-SPACING
+
+letter-spacing: normal;
+word-spacing: #px;
+
+line-height: length, #px, (# times the font size), %, normal;
+
+
+
+
+
+
+									TEXT-ALIGN
+
+text-align: left, center, right, justify;
+
+
+
+
+
+
+
+									TEXT-INDENT
+
+text-indent: length, %
+
+	-> Used for printed media, but rarely for pure webpages. 
 
 
 
@@ -114,6 +203,72 @@ text-align: left; center; right
 padding-top: 10px;
 
 width: 100%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									MARGINS
+									   &
+									PADDING
+
+Margin is the space outside of something
+
+Padding is the space inside of something
+
+margin: 20px;
+
+padding: 40px;
+
+	->These may also be done as such:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+etc.
+
+
+
+
+
+
+
+
+									BORDERS
+
+border-style: The values can be solid, dotted, dashed, double, groove, ridge, inset and outset;
+
+border-width: #px;    or    
+border-top-width:
+border-right-width;
+border-bottom-width;
+border-left-width;
+
+
+border-color:
+
+
+
+									BOX MODEL	
+
+
+
+https://screenshots.firefox.com/nPzQNWPCcJibKQs9/www.htmldog.com
+
+~/Pictures/images/Screenshot_2018-10-15\ Margins\ and\ Padding\ HTML\ Dog.png
 
 
 

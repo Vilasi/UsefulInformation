@@ -28,7 +28,7 @@ THE <style> TAG: A dedicated section for CSS code.
  					 </style>
 
 
-				HE STYLE.CSS FILE:
+				THE STYLE.CSS FILE:
 
 To keep code types separated, a .css file can be linked to from within the HTML file.
 
@@ -191,9 +191,9 @@ To select this in CSS, a # is used.
 
 
 
-				Applying the Same Style 
-					  to
-			          Multiple Selectors
+				APPLYING THE SAME STYLE 
+					  TO
+			          MULTIPLE SELECTORS
 
 
 
@@ -227,4 +227,30 @@ This could be done more consicely, by:
 
 
 
-One common way to keep our CSS concise is via proper utilization of “inheritance”. Within CSS, the computed values of many properties get inherited from ancestor elements. We can use this fact to reduce the number of declarations we write. For example, if I want most of the text on my page to be 20px I can declare font-size: 20px on the html selector. As <html> is the root element and the font-size property is inheritable, all text for this page will be 20px. In cases where we want to deviate from this 20px norm, we can use a selector with a higher specificty to target the element whose font-size we want to override.
+One common way to keep our CSS concise is via proper utilization of “inheritance”. Within CSS, the computed values of many properties get inherited from ancestor elements. We can use this fact to reduce the number of declarations we write. For example, if I want most of the text on my page to be 20px I can declare font-size: 20px on the html selector. As <html> is the root element and the font-size property
+
+
+
+ is inheritable, all text for this page will be 20px. In cases where we want to deviate from this 20px norm, we can use a selector with a higher specificty to target the element whose font-size we want to override.
+
+
+
+
+					LENGTHS AND PERCENTAGES
+
+px (such as font-size: 12px;) is the unit for pixels
+
+em (such as font-size: 2em;) is the unit for the calculated size of the font.
+	2em would be two times the current font size.
+
+pt (such as font-size: 12pt;) is the unit for points. Typically for use
+	in printed media.
+
+% (such as width: 80%) is the unit for percentages.
+
+...other units include pc (picas), cm (centimeters), 
+	mm (millimeters), and in (inches)
+
+
+When a value is 0, you don't need to state a unit.
+ (e.g.) If you want no border, it would be (border: 0;)
