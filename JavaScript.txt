@@ -1,0 +1,224 @@
+															DATA TYPES:
+
+Numbers:
+
+0-9
+
+Infinity, -Infinity
+
+NaN
+
+	NaN will propagate through an expression, and will return itself 
+		as opposed to an error.
+
+
+
+
+
+
+
+
+
+
+															STRINGS:
+
+Must be inside of quotes.
+
+""  &  ''   both serve identically.
+
+``          (backticks) can be used to embed something else, such that
+		`Two plus two equals ${2 + 2}`;
+
+A string may be a single character eg. (c)
+
+
+If an error such as 
+
+	unterminated string literal
+
+Go back through and make sure all strings are contained within quotation marks.
+
+
+
+
+
+
+
+
+
+															BOOLEAN:
+
+True or False
+
+	let nameFieldChecked = true; // yes, name field is checked
+	let ageFieldChecked = false; // no, age field is not checked
+
+
+Booleans also come as the result of comparisons, eg:
+	
+	let isGreater = 4 > 1;
+
+	alert( isGreater ); // true (the comparison result is "yes")
+
+
+
+
+
+
+
+
+
+															NULL:
+
+Empty. Nothing. Refers to Nothing Else. It's just an empty nothing.
+
+	let age = null;
+
+		The value of age is unknown
+
+
+
+
+
+
+
+
+
+
+
+															UNDEFINED:
+
+A value is not assigned
+
+If a variable is declared but not assigned a value,
+	the value is undefined
+
+	let x;
+
+	alert(x); // shows "undefined"
+
+Technically, you can do
+
+	let x = 123;
+
+	x = undefined;
+
+	alert(x); // "undefined"
+
+It is advisable to not do this, and to instead assign a value of "null"
+to variables that don't have a value.
+
+Undefined can be used as a check to see if a variable has a value.
+
+
+
+
+
+
+
+
+
+															OBJECTS & SYMBOLS
+
+object is a non-primitave data type used to store lareger collections of data.
+
+The symbol type is used to create unique lables for objects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+															TYPEOF
+
+The typeof operator returns the type of the argument.
+
+It's useful for processing values of different types differently,
+	or for a quick check of what datatype a variable is.
+
+Two forms of Syntax:
+	
+    As an operator: typeof x
+
+    Function style: typeof(x)
+
+	These both work exactly the same
+
+
+Examples:
+
+	typeof undefined // "undefined"
+
+	typeof 0 // "number"
+
+	typeof true // "boolean"
+
+	typeof "foo" // "string"
+
+	typeof Symbol("id") // "symbol"
+
+	typeof Math // "object"  (1)
+
+	typeof null // "object"  (2)
+
+	typeof alert // "function"  (3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+															
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
