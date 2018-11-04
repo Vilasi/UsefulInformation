@@ -1,0 +1,661 @@
+															GROUPING
+
+Instead of doing something like: 
+
+
+h2 {
+    color: red;
+}
+
+.thisOtherClass {
+    color: red;
+}
+
+.yetAnotherClass {
+    color: red;
+}
+
+
+
+
+/* You can do something like: */
+
+
+h2, .thisOtherClass, .yetAnotherClass {
+    color: red;
+}
+
+
+
+
+
+
+
+															NESTING
+
+You can apply properties to selecors within other selectors.
+
+#top {
+    background-color: #ccc;
+    padding: 1em
+}
+
+#top h1 {
+    color: #ff0;
+}
+
+#top p {
+    color: red;
+    font-weight: bold;
+
+
+
+/* This would work well on HTML that appears as: */
+
+
+
+div id="top">
+    <h1>Chocolate curry</h1>
+    <p>This is my recipe for making curry purely with chocolate</p>
+    <p>Mmm mm mmmmm</p>
+</div>
+
+
+
+
+
+
+
+
+
+									 					  PSEUDO SELECTORS
+
+
+Pseudo classes are bolted on to selectors to specify a state or relation to the selector. 
+They take the form of selector:pseudo_class { property: value; } 
+Simply with a colon in between the selector and the pseudo class.
+
+
+
+
+
+									 				 ->LINKS
+link : Targeting Unvisited Links
+
+visited : Targeting Visited Links
+
+
+
+The following will apply colors to all links in a page depending on 
+whether the user has visited that page before or not:
+
+a:link {
+  color: blue;
+}
+
+
+a:visited {
+  color: purple;
+}
+
+
+
+
+
+
+												->DYNAMIC PSEUDO CLASSES
+
+Also commonly used for links. Can be used to apply 
+styles when something happens to something.
+
+
+:active    When something is activated by user input, such as a user clicking on something.
+
+:hover     When something is activated by being passed over. Link a mouse moving over.
+
+:focus     When something is the focus, and ready for keyboard input.
+	->This can be used for text boxes and forms, but is also useful for links for non-mouse users. 
+
+
+
+
+	a:active {
+	    color: red;
+	}
+
+
+	a:hover {
+	    text-decoration: none;
+	    color: blue;
+	    background-color: yellow;
+	}
+
+
+	input:focus, textarea:focus {
+	    background: #eee;
+	}
+
+
+
+
+												-> FIRST CHILDREN
+
+:first-child        This will target something only if it is the first descendent of an element. 
+
+So, in the following HTML:
+
+	<body>
+ 	   <p>I’m the body’s first paragraph child. I rule. Obey me.</p>
+ 	   <p>I resent you.</p>
+	</body>
+
+
+…if you only want to style the first paragraph, you could use the following CSS:
+
+
+
+	p:first-child {
+ 	   font-weight: bold;
+	   font-size: 40px;
+	}
+
+
+
+
+->There are many more pseudo-classes. Such as last-child, last target, first of type, and more
+  =>Look these up
+
+
+
+
+
+
+
+													SHORTHAND PROPERTIES
+
+Some CSS properties allow a string of values, replacing the need for a number of properties. 
+These are represented by values separated by spaces.
+
+the margin property allows you to combine its 4 values: top, right, bottom, left as:
+
+		margin: top right bottom left
+
+		(e.g.):  margin: 0px 10px 0px 10px;
+
+
+padding can be used in the same way:
+
+		padding: 0px 10px 0px 10px;
+
+
+by stating just two values, such as
+
+		padding: 1em 10em;
+
+the first value will be top and bottom
+the second valuen will be right and left
+
+
+
+
+
+												->BORDER SHORTHAND
+
+	border-width: 20px;
+	border-color: red;
+	border-style: solid;
+
+Can be simplified as
+
+	border: 20px red solid;
+
+This can also be applied to border-top, border-right, border-bottom, border-left.
+
+
+
+
+
+												->FONT SHORTHAND
+
+font:font-style, font-type, font-size/line-height font-family; 
+
+These can all be combined into one line:
+
+
+	p {
+	    font: italic bold 12px/2 courier;
+	}
+
+
+
+
+
+
+
+Combine all these shorthands together and you get.
+
+
+	p {
+	    font: 14px/1.5 "Times New Roman", times, serif;
+	    padding: 30px 10px;
+	    border: 1px black solid;
+	    border-width: 1px 5px 5px 1px;
+	    border-color: red green blue yellow;
+	    margin: 10px 50px;
+	}
+
+
+
+
+
+
+
+
+														BACKGROUND IMAGES
+
+	
+	body {
+	    background: white url(http://www.htmldog.com/images/bg.gif) no-repeat top right;
+	}
+
+This is an amalgamation of 
+
+background-color:
+background-image: url()
+background-repeat: 
+background-position: top; center; bottom; left; right; #px; %; top right; bottom left; ...etc
+
+
+
+
+
+
+
+														CALCULATING SPECIFICITY
+
+The actual specificity of a group of nested selectors takes some calculating. 
+You can give every ID selector (#whatever) a value of 100
+Every class selector (.whatever) a value of 10 
+Every HTML selector (whatever) a value of 1. 
+
+When you add them all up, you have the value of specificity for that selector.
+
+
+
+    p has a specificity of 1 (1 HTML selector)
+    div p has a specificity of 2 (2 HTML selectors, 1+1)
+    .tree has a specificity of 10 (1 class selector)
+    div p.tree has a specificity of 12 (2 HTML selectors + a class selector, 1+1+10)
+    #baobab has a specificity of 100 (1 id selector)
+
+    body #content .alternative p has a specificity of 112 
+(HTML selector + id selector + class selector + HTML selector, 1+100+10+1)
+
+
+
+
+
+
+
+
+	
+														DISPLAY TYPES
+
+display: inline;
+
+display: block;
+
+display: none;
+
+
+
+												->display: inline;
+
+
+display: inline;     will display all items inline with each other on a page
+
+	<ol>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	</ol>
+
+
+
+	li {
+	  display: inline;
+	}
+
+This will make all list items to appear inline with each other.
+
+	li li li li
+
+
+
+
+
+
+
+												->display: block;
+
+display: block;       Will display all items in a block, with space between.
+
+	A margin, padding, and height value can be given to this
+
+
+	#navigation a {
+  	  display: block;
+  	  padding: 20px 10px;
+	}
+
+
+This would make all links in id="nav" boxes with 20px top and bottom, 10px right and left.
+
+
+
+
+
+
+
+
+												->display: inline-block
+
+Keeps the blocks made in line, allowing margins between them.
+
+
+
+
+
+
+
+												->display: none;
+
+Will make something stop displaying. 
+Can be used for clickable links and things that will make something
+dissappear from the page. It is no longer loaded into the page. 
+
+
+	visibility: hidden
+
+
+this is similar to display: none, except that the item will still remain on the page.
+
+
+
+
+
+
+
+
+
+
+													CSS TABLES
+
+table is the initial display and you can mimic the tr and td elements with the 
+table-row and table-cell property values respectively.
+
+The display property goes further by offering 
+table-column, 
+table-row-group, 
+table-column-group, 
+table-header-group, 
+table-footer-group 
+table-caption as values, which are all quite self-descriptive. The immediately obvious benefit of these values is that you can construct a table by columns, rather than the row-biased method used in HTML.
+
+Finally, the value inline-table basically sets the table without line breaks before and after it.
+
+
+
+
+
+
+
+
+
+
+
+														PSEUDO ELEMENTS
+
+	selector:element {
+
+	}
+
+
+
+
+
+
+
+
+													-> First Lines
+
+
+	p {
+	    font-size: 12px;
+	}
+
+
+
+	p:first-letter {
+	    font-size: 24px;
+	    float: left;
+	}
+
+
+
+	p:first-line {
+	    font-weight: bold;
+	}
+
+
+
+
+This would make the first letter of <p> font-size: 24px; and float:left;
+
+This would make the first line of text in <p> font-weight:bold;
+
+
+
+
+
+
+
+
+
+
+														BEFORE AND AFTER
+														CONTENT
+
+
+	blockquote:before {
+ 	  content: open-quote;
+	}
+
+
+
+	blockquote:after {
+    	  content: close-quote;
+	}
+
+
+
+	li:before {
+	    content: "POW! ";
+	}
+
+
+
+	p:before {
+	    content: url(images/jam.jpg);
+	}
+
+
+
+
+
+These make it so that there is information contained to the left or right of the element you're selecting.
+
+the value in content can be 
+
+content: open-quote;    
+
+content: close-quote;
+
+content: "any thing you want (this is a string)";                   -> in quotes
+
+content: url(image-location.png);
+
+
+
+This effectively makes another box that you can manipulate
+
+
+
+	li:before {
+	    content: "POW! ";
+	    background: red;
+	    color: #fc0;
+	}
+
+
+
+
+
+
+
+
+
+
+
+															PAGE LAYOUT
+
+"You take a chunk of your page and shove it wherever you want it to go"
+
+
+
+
+
+												->positioning
+
+position: static
+
+this is the default value and positions things as they would from HTML alone.
+
+
+
+
+
+position: relative 
+top: 20px;
+right:300px
+
+this moves the position relative to where it places by default
+
+
+
+
+
+position: absolute;
+bottom: 200px;
+left: 45px;
+
+this allows the box to be freely plaved anywhere on the page
+
+
+
+
+
+For example, a two column layout can be made with absolute positioning:
+
+
+
+	<div id="navigation">
+    	<ul>	
+        	<li><a href="this.html">This</a></li>
+        	<li><a href="that.html">That</a></li>
+        	<li><a href="theOther.html">The Other</a></li>
+    	</ul>
+	</div>
+
+	<div id="content">
+    	<h1>Ra ra banjo banjo</h1>
+    	<p>Welcome to the Ra ra banjo banjo page. Ra ra banjo banjo. Ra ra banjo banjo. Ra ra banjo banjo.</p>
+    	<p>(Ra ra banjo banjo)</p>
+	</div>
+
+
+
+
+then in CSS
+
+
+
+	#navigation {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 200px;
+	}
+
+
+
+	#content {
+    	margin-left: 200px;
+	}
+
+
+
+
+
+
+
+position: fixed;
+top: 200px;
+left: 150px;
+
+
+
+
+
+
+
+														FLOAT
+
+Floating a box will shift it to the right or left of a line
+	
+	float: right;
+	
+
+	float: left;
+
+
+If you don't want the next box to wrap around the floating objects
+You can add the "clear" property
+
+	clear: right;
+
+	clear: left;
+
+	clear: both;
+
+For Example:
+
+	
+	<div id="footer">
+	    <p>Footer! Hoorah!</p>
+	</div>
+
+
+
+
+
+
+	#footer {
+	    clear: both;
+	}
+
+This will make a footer that will be below any table no matter its length.
+
+
+	
+

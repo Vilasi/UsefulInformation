@@ -301,7 +301,7 @@ background: linear-gradient(-45deg, #C46E41, #00FFD1);
 
 
 
-									OPACITY
+														OPACITY
 
 Opacity is the measure of how transparent something is.
 
@@ -314,7 +314,7 @@ This can be used to make things fade nicely into each other.
 
 
 
-									BACKGROUND-IMAGE
+														BACKGROUND-IMAGE
 
 background-image
 
