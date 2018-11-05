@@ -39,10 +39,73 @@ If an error such as
 Go back through and make sure all strings are contained within quotation marks.
 
 
+The Same type of quotation marks that were used to open the string cannot be contained 
+	within the string itself.
+
+	eg
+	var bigmouth = 'I've got no right to take my place...';
+
+	This will retrun an error.
+
+This can be overcome by "escaping" the 	character with a backslash \
+
+	var bigmouth = 'I\'ve got no right to take my place...';
+
+	bigmouth; "I've got no right to take my place..."
+
+
+
+The Number object can be used to convert a string to a number.
+
+	var myString = '123';
+	var myNum = Number(myString);
+	typeof myNum;
+
+
+toString() will convert a number to a string:
+
+	var myNum = 123;
+	var myString = myNum.toString();
+	typeof myString;
 
 
 
 
+
+
+
+
+
+															STRINGS:
+															METHODS AND PROPERTIES
+
+String Length:
+
+The Length Property returns the length of a string:
+
+	var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var sln = txt.length; 
+
+
+Finding a String in a String:
+
+The indexOf() returns the index of (the position of) the first occurance of a specified text
+in a string.
+
+	var str = "Please locate where 'locate' occurs!";
+	var pos = str.indexOf("locate"); \\ 7
+
+The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+
+
+
+
+This is similar to search()
+
+	
+    The search() method cannot take a second start position argument.
+    The indexOf() method cannot take powerful search values (regular expressions).
 
 
 
