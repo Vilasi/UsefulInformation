@@ -79,6 +79,10 @@ toString() will convert a number to a string:
 															STRINGS:
 															METHODS AND PROPERTIES
 
+
+
+															LENGTH
+
 String Length:
 
 The Length Property returns the length of a string:
@@ -86,6 +90,11 @@ The Length Property returns the length of a string:
 	var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	var sln = txt.length; 
 
+
+
+
+
+															INDEXOF
 
 Finding a String in a String:
 
@@ -106,6 +115,172 @@ This is similar to search()
 	
     The search() method cannot take a second start position argument.
     The indexOf() method cannot take powerful search values (regular expressions).
+
+
+
+
+
+
+
+
+															EXTRACTING
+
+3 Ways
+
+    slice(start, end)
+    substring(start, end)
+    substr(start, length)
+
+This example slices out a portion of a string from position 7 to position 13: 
+
+	var str = "Apple, Banana, Kiwi";
+	ar res = str.slice(7, 13); \\ Banana
+
+If the numbers in slice() are negative, it will count from the end of the string.
+
+substring() is the same, but it can't accept negative numbers.
+
+substr() is similar to slice(), but the second numbe specifies the length 
+what will be cut out after the starting point of the first number
+
+	var str = "Apple, Banana, Kiwi";
+	var res = str.substr(7, 6); \\ Banana
+
+
+
+
+
+															REPLACE
+
+replace() replaces a value in a string with something else.
+This does not change the orignal string, but returns a new one.
+
+	str = "Please visit Microsoft!";
+	var n = str.replace("Microsoft", "W3Schools");
+
+To replace case insensitive, use a regular expression with an /i flag (insensitive):
+
+	str = "Please visit Microsoft!";
+	var n = str.replace(/MICROSOFT/i, "W3Schools");
+
+To replace all instances globally within a string, use a /g flag
+
+	str = "Please visit Microsoft and Microsoft!";
+	var n = str.replace(/Microsoft/g, "W3Schools");
+
+
+
+
+															CONVERT TO UPPERCASE
+																or lowercase
+
+toUpperCase()
+toLowerCase()
+
+	var text1 = "Hello World!";       // String
+	var text2 = text1.toUpperCase();  // text2 is text1 converted to upper 
+
+
+
+
+															CONCATENATION METHOD
+
+concat()    this joins two or more strings
+
+	var text1 = "Hello";
+	var text2 = "World";
+	var text3 = text1.concat(" ", text2); // Hello World
+
+This can be used instead of the + operator
+
+This would return the same thing as the above
+
+	var text = "Hello" + " " + "World!";
+	var text = "Hello".concat(" ", "World!");  	
+
+
+
+
+
+
+															REMOVING WHITE SPACE
+
+String.trim()  trims off excess white space at the start and end of a string	
+
+
+
+
+
+
+
+
+															EXTRACTING STRING CHARACTERS
+
+charAt(position)
+
+	var str = "HELLO WORLD";
+	str.charAt(0);            // returns H 
+
+
+charCodeAt(position)
+
+Returns the unicode of the character at a specified index in a string:
+
+The method returns a UTF-16 code (an integer between 0 and 65535).
+
+	var str = "HELLO WORLD";
+
+	str.charCodeAt(0);         // returns 72 
+
+
+Property access []
+
+
+	var str = "HELLO WORLD";
+	str[0];                   // returns H 
+
+
+
+
+
+															CONVERTING A STRING
+															TO AN ARRAY
+
+split()
+
+	var txt = "a,b,c,d,e";   // String
+	txt.split(",");          // Split on commas
+	txt.split(" ");          // Split on spaces
+	txt.split("|");          // Split on pipe 
+
+
+If the separator is ommitted, it will return the whole string as an array in index[0].
+
+If the separator is "" the returned array will be an array of single characters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -233,6 +408,107 @@ Examples:
 	typeof null // "object"  (2)
 
 	typeof alert // "function"  (3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+															CONDITIONALS
+
+
+
+
+															COMPARISONS
+
+
+
+A comparison:    <    >    >=    <=    ==      returns a boolean (true, false)
+
+This can be assigned to a variable:
+
+	let result = 5>4; // true
+
+
+
+
+Strings can be compared just as well as numbers
+
+	alert( 'Z' > 'A' ); // true
+
+	alert( 'Glow' > 'Glee' ); // true
+
+	alert( 'Bee' > 'Be' ); // true
+
+
+	
+    1. Compare first characters of both strings.
+    2. If the first one is greater(or less), then the first string is greater(or less) than the second. We’re done.
+    3. Otherwise if first characters are equal, compare the second characters the same way.
+    4. Repeat until the end of any string.
+    5. If both strings ended simultaneously, then they are equal. Otherwise the longer string is greater.
+
+Lowercase letters have a higher value than uppercase. Think of the order
+Words would be in in a dictionary.
+
+
+
+When variables of different types are compared, they are converted to numbers.
+
+	alert( '2' > 1 ); // true, string '2' becomes a number 2
+	alert( '01' == 1 ); // true, string '01' becomes a number 1
+
+
+For Booleans:
+
+	true == 1
+
+	false == 0
+
+It is possible that at the same time:
+
+    Two values are equal.
+    One of them is true as a boolean and the other one is false as a boolean.
+
+
+	let a = 0;
+	alert( Boolean(a) ); // false
+
+	let b = "0";
+	alert( Boolean(b) ); // true
+
+	alert(a == b); // true!
+
+
+
+															STRICT EQUALITY
+
+===
+
+Strict Equality: There is no type conversion with this.
+
+
+0 == false
+
+"" == false
+
+This is because operands of different types are converted to numbers 
+through the equality operator ==
 
 
 
