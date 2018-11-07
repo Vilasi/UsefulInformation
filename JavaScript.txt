@@ -429,7 +429,7 @@ Examples:
 
 
 
-															CONDITIONALS
+															CONDITIONALS:
 
 
 
@@ -511,7 +511,174 @@ This is because operands of different types are converted to numbers
 through the equality operator ==
 
 
+	alert(0 === false); // false, because 0 and false are of different types.
 
+!== Strict non equality operator
+
+
+
+
+
+
+															COMPARISON WITH NULL 
+															    & UNDEFINED
+
+	alert( null === undefined ); // false
+
+Null == undefined   (This is the only case in which they are equilivent)
+
+These two equal each other in terms of ==
+	But not in any other case.
+
+
+
+	< > <= >= 
+In this case, null (0) and undefined (NaN) are converted to numbers.
+
+
+
+	alert( null > 0 );  // (1) false
+	alert( null == 0 ); // (2) false
+	alert( null >= 0 ); // (3) true
+
+Since comparisons convert null to 0, null > 0 is false
+
+In an equality check, == , null is a special value different from 0
+	So null == 0 is false.
+
+In comparison >= , null is converted to 0, so null >= 0 is true.
+
+
+
+
+
+
+
+	alert( undefined > 0 ); // false (1)
+	alert( undefined < 0 ); // false (2)
+	alert( undefined == 0 ); // false (3)
+
+Undefined can only pass an equality test, == , with Null, nothing else.
+
+
+
+To avoid problems, try no never include null/undefined in comparisons. 
+Making a separate check for null/undefined is a good idea. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+															LOGICAL OPERATORS:
+
+|| (or)           && (and)           ! (not)
+
+
+
+
+
+
+|| can be applied to any value, not just booleans.
+
+	result = a||b;
+
+With booleans, there are four possible outcomes
+
+alert( true || true );  // true
+alert( true || false ); // true
+alert( false || true ): // true
+alert(false || false);  // false
+
+
+
+If an operand is not boolean, then it’s converted to boolean for the evaluation.
+
+For instance, a number 1 is treated as true, a number 0 – as false:
+
+Often, || is used as part of an if statement to see if any of the given conditions are correct. 
+
+	let hour = 9;
+
+	if (hour < 10 || hour > 18) {
+	  alert( 'The office is closed.' );
+	}
+
+
+This can be applied with more than two values:
+
+	let hour = 12;
+	let isWeekend = true;
+
+	if (hour < 10 || hour > 18 || isWeekend) {
+ 	 alert( 'The office is closed.' ); // it is the weekend
+	}
+
+
+
+The || operator does the following:
+
+	1. Evaluates operands from left to right
+	2. For each operant, convert it to a boolean. If the result is true then stop and return the original
+		value of that operand
+	3. If all other operands were false, returns the last operand.
+
+
+	alert( 1 || 0 ); // 1 (1 is truthy)
+
+	alert( true || "no matter what" ); // true is truthy
+
+	alert ( null || 1 ); // 1 (1 is the first truthy value)
+
+	alert ( null || 0 || 1 ) // 1 (the first truthy value)
+
+	alert ( null || undefined || 0 ); // 0 (all falsy, last value returned)
+
+
+
+
+
+eg: 
+	let currentUser = null;
+	let defaultUser = "John";
+	
+	let name = currentUser || defaultUser || "unnamed"
+
+
+	alert( name ); // selects "John" (The first truthy value).
+
+
+
+
+
+
+Operands can be both values and random expressions:
+
+	let x;
+
+	true || (x = 1);
+
+	alert( x ); // undefined ((x = 1) was was not evaluated)
+
+	
+	...therefore
+
+
+	let x;
+
+	false || (x = 1);
+
+	alert(x); // 1
 
 
 
