@@ -589,6 +589,9 @@ Making a separate check for null/undefined is a good idea.
 
 
 
+
+															|| (OR)
+
 || can be applied to any value, not just booleans.
 
 	result = a||b;
@@ -680,6 +683,167 @@ Operands can be both values and random expressions:
 
 	alert(x); // 1
 
+
+
+
+
+
+
+
+
+
+
+															&& (AND)
+
+	result = a && b;
+
+
+
+	alert( true && true); // true
+	alert( true && false); // false
+	alert( false && true); // false
+	alert( false && false); // false
+
+
+
+
+	let hour = 12;
+	let minute = 30;
+
+	if (hour == 12 && minute == 30) {
+  	alert( 'Time is 12:30' );
+	}
+	
+	
+
+
+	if (1 && 0) { //evaluate as true and false
+	  alert( 'Won't work because the result is falsy)
+	}
+
+
+
+
+
+AND seeks the first falsy value.
+
+	result = value1 && value2 && value3;
+
+&& evaluates as such:
+	1. Evaluates from Left to Right
+	2. Finds the first falsy value, and returns it.
+	3. If all are truthy, returns the last value if no falsy were found.
+
+
+	// if the first operand is truthy,
+	// AND returns the second operand:
+	alert( 1 && 0 ); // 0
+	alert( 1 && 5 ); // 5
+	
+	// if the first operand is falsy,
+	// AND returns it. The second operand is ignored
+	alert( null && 5 ); // null
+	alert( 0 && "no matter what" ); // 0
+
+
+
+
+&& Has a higher precedence than ||
+
+
+
+
+
+
+
+
+
+
+
+
+
+															! (NOT)
+
+	result = !value;
+
+	1. Converts the operator to a boolean type (true/false)
+	2. Returns an inverse value.
+
+
+
+
+	alert( !true ); // false
+
+	alert (!0 ); // True
+
+
+
+A double NOT !! is sometimes used to convert a value to a boolean type:
+
+	alert( !!"non-empty string" ); // true
+	alert( !!null ); // false
+
+
+
+This would be the same as doing:
+
+	alert( Boolean("non-empty string") ); //true
+	alert( Boolean(null) ); // false
+
+
+
+
+
+! (NOT) has a higher precedence than || , &&
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+															IF:
+
+	if (condition) {
+ 	   block of code to be executed if the condition is true
+	} 
+
+
+
+
+
+															ELSE:
+
+	 if (condition) {
+	    block of code to be executed if the condition is true
+	} else {
+	    block of code to be executed if the condition is false
+	}
+
+
+
+
+
+															ELSE IF:
+
+	if (condition1) {
+	    block of code to be executed if condition1 is true
+	} else if (condition2) {
+	    block of code to be executed if the condition1 is false and condition2 is true
+	} else {
+	    block of code to be executed if the condition1 is false and condition2 is false
+	}
 
 
 
