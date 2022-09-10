@@ -320,6 +320,8 @@ Booleans also come as the result of comparisons, eg:
 Empty. Nothing. Refers to Nothing Else. It's just an empty nothing.
 It has to be assigned
 
+Explicitly defines something as having no value. Useful for when you want to make it clear in the code that there is no data here.
+
 	let age = null;
 
 		The value of age is unknown
@@ -358,6 +360,8 @@ It is advisable to not do this, and to instead assign a value of "null"
 to variables that don't have a value.
 
 Undefined can be used as a check to see if a variable has a value.
+
+
 
 
 
@@ -822,6 +826,12 @@ This would be the same as doing:
 
 
 
+															Math.object
+
+															
+An object built into the JS language that provides a useful set of generalized mathematical stuff. Like rounding, and tangents, and Random, and PI, etc, etc, etc, etc
+
+Math.PI
 
 
 															IF:
