@@ -172,6 +172,11 @@ To Replace All instances within a string - supported by all modern browsers 2022
 	String.prototype.replaceAll()
 
 
+															      REPEAT
+'lol'.repeat(5);
+'lollollollollol'
+
+
 
 															CONVERT TO UPPERCASE
 																or lowercase
