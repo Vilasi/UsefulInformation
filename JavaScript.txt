@@ -168,6 +168,8 @@ To replace all instances globally within a string, use a /g flag
 	str = "Please visit Microsoft and Microsoft!";
 	var n = str.replace(/Microsoft/g, "W3Schools");
 
+To Replace All instances within a string - supported by all modern browsers 2022
+	String.prototype.replaceAll()
 
 
 
