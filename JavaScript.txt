@@ -26,6 +26,8 @@ Must be inside of quotes.
 
 ""  &  ''   both serve identically.
 
+		STRING LITERALS	
+
 ``          (backticks) can be used to embed something else, such that
 		`Two plus two equals ${2 + 2}`;
 
@@ -316,6 +318,7 @@ Booleans also come as the result of comparisons, eg:
 															NULL:
 
 Empty. Nothing. Refers to Nothing Else. It's just an empty nothing.
+It has to be assigned
 
 	let age = null;
 
@@ -335,6 +338,7 @@ Empty. Nothing. Refers to Nothing Else. It's just an empty nothing.
 
 A value is not assigned
 
+Variables that do not have an assigned value are undefined.
 If a variable is declared but not assigned a value,
 	the value is undefined
 
